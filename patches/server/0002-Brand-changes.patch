@@ -13,7 +13,7 @@ index dee00aac05f1acf050f05d4db557a08dd0f301c8..52c0ab1ce46e1f3233ef746d9bc69935
              // Only start Metrics, if it's enabled in the config
              if (config.getBoolean("enabled", true)) {
 -                Metrics metrics = new Metrics("Paper", serverUUID, logFailedRequests, Bukkit.getLogger());
-+                Metrics metrics = new Metrics("Tuinity", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page
++                Metrics metrics = new Metrics("PbtServer", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page
  
                  metrics.addCustomChart(new Metrics.SimplePie("minecraft_version", () -> {
                      String minecraftVersion = Bukkit.getVersion();
@@ -48,7 +48,7 @@ index bf80e870e6a2a6fe1d4ae1bea355bcd7a0735d3b..da66369c63e60e6e0328392b2eb98579
  
      public String getServerModName() {
 -        return "Paper"; //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
-+        return "Tuinity"; // Tuinity //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return "PbtServer"; // Tuinity //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
      }
  
      public CrashReport b(CrashReport crashreport) {
@@ -61,7 +61,7 @@ index cebecee640ed5a7fc2b978e00ff7eb012228267d..5ab23a2266f81a3dea6c5ab0c5b8a979
  
  public final class CraftServer implements Server {
 -    private final String serverName = "Paper"; // Paper
-+    private final String serverName = "Tuinity"; // Paper // Tuinity
++    private final String serverName = "PbtServer"; // Paper // Tuinity
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");

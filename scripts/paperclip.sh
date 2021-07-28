@@ -15,11 +15,11 @@ vanillajar="$workdir/Minecraft/$mcver/$mcver.jar"
     cd "$workdir/Paperclip"
     mvn clean package "-Dmcver=$mcver" "-Dpaperjar=$paperjar" "-Dvanillajar=$vanillajar"
 )
-cp "$workdir/Paperclip/assembly/target/paperclip-${mcver}.jar" "$basedir/tuinity-paperclip.jar"
+cp "$workdir/Paperclip/assembly/target/paperclip-${mcver}.jar" "$basedir/PbtServer-Tuinity-1.16.5-SNAPSHOT.jar"
 
 echo ""
 echo ""
 echo ""
 echo "Build success!"
-echo "Copied final jar to $(cd "$basedir" && pwd -P)/tuinity-paperclip.jar"
+echo "Copied final jar to $(cd "$basedir" && pwd -P)/PbtServer-Tuinity-1.16.5-SNAPSHOT.jar"
 ) || exit 1
